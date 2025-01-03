@@ -8,7 +8,7 @@ def scan_bluetooth_devices():
     command1 = "hcitool scan"
     process = subprocess.run(command1, shell=True, text=True)
     
-    # Print results
+    # print results
     if devices:
         print("\n--- Bluetooth Devices Found ---")
         for i, device in enumerate(devices, start=1):
@@ -24,7 +24,7 @@ def scan_ble_devices():
     command2 = "sudo hcitool lescan"
     process = subprocess.run(command2, shell=True)
  
- # Print results
+ # print results
     if devices:
         print("\n--- BLE Devices Found ---")
         for i, device in enumerate(devices, start=1):
@@ -36,10 +36,10 @@ def scan_ble_devices():
 import os
 import time
 
-# Function to clear the terminal screen
+# clear the terminal screen
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
-# Define your ASCII art frames
+# ASCII art frames
 frames = [ 
     """
                                                                                              
